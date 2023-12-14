@@ -1,6 +1,7 @@
+
 class Recipe {
   final String? name;
-  final String? images;
+  final List<dynamic>? images;
   final double? rating;
   final String? totalTime;
 
@@ -12,13 +13,11 @@ class Recipe {
   });
 
   factory Recipe.fromJson(dynamic json){
-    print("json");
-    print(json['name']);
     return Recipe(
-        name: json["name"] as String,
-        images: json["images"][0]["hostedLargeUrl"] as String,
-        rating: json["rating"] as double,
-        totalTime: json["totalTime"] as String);
+        name: json["name"],
+        images: json["images"],
+        rating: json["rating"],
+        totalTime: json["totalTime"]);
   }
 
   static List<Recipe> recipeFromSnapshot(List snapshot){

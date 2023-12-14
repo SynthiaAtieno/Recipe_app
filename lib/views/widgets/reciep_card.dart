@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class RecipeCard extends StatelessWidget {
   final String title;
-  final String rating;
+  final double rating;
   final String cookTime;
-  final String thumbnailUrl;
+  final String? thumbnailUrl;
   const RecipeCard({
     super.key,
     required this.title,
@@ -32,14 +32,14 @@ class RecipeCard extends StatelessWidget {
             spreadRadius: -6.0,
           ),
         ],
-        image: DecorationImage(
+        image: thumbnailUrl != null ? DecorationImage(
           colorFilter: ColorFilter.mode(
             Colors.black.withOpacity(0.35),
             BlendMode.multiply,
           ),
-          image: NetworkImage(thumbnailUrl),
+          image: NetworkImage(thumbnailUrl!),
           fit: BoxFit.cover,
-        ),
+        ) : null,
       ),
       child: Stack(
         children: [
@@ -78,7 +78,7 @@ class RecipeCard extends StatelessWidget {
                         size: 18,
                       ),
                       const SizedBox(width: 7),
-                      Text(rating),
+                      Text("$rating"),
                     ],
                   ),
                 ),
