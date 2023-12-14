@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: ListView.builder(
+        child: isLoading ? const CircularProgressIndicator() : ListView.builder(
             itemCount: _recipe.length,
             itemBuilder: (context, index) {
               return RecipeCard(

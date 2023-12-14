@@ -20,7 +20,7 @@ class Recipe {
         totalTime: json["totalTime"]);
   }
 
-  static List<Recipe> recipeFromSnapshot(List snapshot){
+ /* static List<Recipe> recipeFromSnapshot(List snapshot){
     return snapshot.map((data){
       return Recipe.fromJson(data);
     }).toList();
@@ -28,5 +28,5 @@ class Recipe {
   @override
   String toString(){
     return 'Recipe {name: $name, images: $images, rating: $rating, totalTime: $totalTime}';
-  }
+  }*/
 }
