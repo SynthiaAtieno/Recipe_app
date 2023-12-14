@@ -50,7 +50,7 @@ class RecipeCard extends StatelessWidget {
               child: Text(
                 title,
                 style: const TextStyle(
-                  fontSize: 19,
+                  fontSize: 19, color:  Colors.white
                 ),
                 overflow: TextOverflow.ellipsis,
                 maxLines: 2,
@@ -78,7 +78,7 @@ class RecipeCard extends StatelessWidget {
                         size: 18,
                       ),
                       const SizedBox(width: 7),
-                      Text("$rating"),
+                      Text("$rating", style: const TextStyle(color:  Colors.white),),
                     ],
                   ),
                 ),
@@ -97,7 +97,7 @@ class RecipeCard extends StatelessWidget {
                         size: 18,
                       ),
                       const SizedBox(width: 7),
-                      Text(cookTime),
+                      Text(cookTime, style: const TextStyle(color:  Colors.white)),
                     ],
                   ),
                 )
