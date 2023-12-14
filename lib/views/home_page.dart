@@ -11,7 +11,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  late List<Recipe> _recipe;
+  List<Recipe> _recipe = [];
   bool isLoading = true;
 
   @override
@@ -25,6 +25,7 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       isLoading = false;
     });
+    print(_recipe);
   }
   @override
   Widget build(BuildContext context) {
@@ -44,7 +45,7 @@ class _HomePageState extends State<HomePage> {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: const [
-            RecipeCard(title: "title", cookTime: "cookTime", rating: "rating", thumbnailUrl: "https://lh3.googleusercontent.com/ecJftfvxSWg45EZKGT0iMOc5Lc0yYxZiqRnTriRxyn4iIgnX-sARTNUXrTUKSBg4j3JZYLhYLq84ZDXGZXsAQQ=s360")
+            //RecipeCard(title: "title", cookTime: "cookTime", rating: "rating", thumbnailUrl: "https://lh3.googleusercontent.com/ecJftfvxSWg45EZKGT0iMOc5Lc0yYxZiqRnTriRxyn4iIgnX-sARTNUXrTUKSBg4j3JZYLhYLq84ZDXGZXsAQQ=s360")
           ],
         ),
       ),

@@ -13,11 +13,14 @@ class RecipeApi{
     });
 
     Map data = jsonDecode(response.body);
+    print("jsondata");
+
     List temp = [];
 
     for(var i in data['feed']){
       temp.add(i['content']['details']);
     }
+    print(temp);
     return Recipe.recipeFromSnapshot(temp);
 }
 }
